@@ -1,10 +1,10 @@
-import { createBrowserHistory } from 'history'
+// import { createBrowserHistory } from 'history'
 import { createStore, applyMiddleware, compose } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
-import { routerMiddleware } from 'react-router-redux';
+// import { routerMiddleware } from 'react-router-redux';
 import { rootReducer } from './reducers';
 import { rootEpic } from './epics';
-const history = createBrowserHistory();
+// const history = createBrowserHistory();
 
 const epicMiddleware = createEpicMiddleware(rootEpic);
 
@@ -15,7 +15,7 @@ export default function configureStore() {
         composeEnhancers(
             applyMiddleware(
                 epicMiddleware,
-                routerMiddleware(history)
+                // routerMiddleware(history)
             )
         )
     );

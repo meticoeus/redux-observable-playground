@@ -20,7 +20,7 @@ class App extends Component {
                   Fetch User Info
               </button>
               <div>
-              <textarea>{JSON.stringify(fetchUser, null, 2)}</textarea>
+              {/*<textarea>{()=>{JSON.stringify(fetchUser, null, 2)}}</textarea>*/}
               </div>
           </div>
       </div>

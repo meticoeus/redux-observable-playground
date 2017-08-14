@@ -1,8 +1,8 @@
 import * as ActionTypes from "../ActionTypes"
 
 
-export const fetchUser = username => ({ type: ActionTypes.FETCH_USER, payload: username });
-export const fetchUserFulfilled = payload => ({ type: ActionTypes.FETCH_USER_FULFILLED, payload });
+export function fetchUser (username) { return {type: ActionTypes.FETCH_USER, payload: username }}
+export function fetchUserFulfilled (payload){ return { type: ActionTypes.FETCH_USER_FULFILLED, payload }}
 
 
 
