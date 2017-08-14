@@ -8,6 +8,9 @@ import './App.css';
 import {connect} from "react-redux";
 
 class App extends Component {
+    static defaultProps = {
+      users: [],
+    };
     constructor(props) {
        super(props);
     }
@@ -20,7 +23,14 @@ class App extends Component {
                   Fetch User Info
               </button>
               <div>
-              {/*<textarea>{()=>{JSON.stringify(fetchUser, null, 2)}}</textarea>*/}
+              <textarea>{JSON.stringify(fetchUser, null, 2)}</textarea>
+                  <ul>
+                    {this.props.users.map(user => (
+                      <li key={user.id}>
+                        {user.login}
+                      </li>
+                    ))}
+                  </ul>
               </div>
           </div>
       </div>
@@ -29,7 +39,7 @@ class App extends Component {
 }
 function mapStateToProps(state) {
     return {
-        username: state.username
+        users: state.users ? Object.values(state.users) : []
     };
 }
 
