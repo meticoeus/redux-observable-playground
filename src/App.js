@@ -16,7 +16,7 @@ class App extends Component {
       <div className="App">
           <div>
               <h1>Fetch User Demo</h1>
-              <button onClick={() => this.props.fetchUser()}>
+              <button onClick={() => this.props.fetchUser('Deviad')}>
                   Fetch User Info
               </button>
               <div>
